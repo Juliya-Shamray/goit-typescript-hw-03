@@ -23,18 +23,16 @@ class Employee {
     protected salary: number
   ) {}
 
-  getEmployeeDetails() {
+  getEmployeeDetails(): string {
     return `Name: ${this.name}, Department: ${this.department}, Salary: ${this.salary}`;
   }
 }
 
 class Manager extends Employee {
   constructor(name: string, department: string, salary: number) {
-    super(name, department, salary);
+    super(name, department, salary + 1000);
   }
-  increaseSalary() {
-    return this.salary + 10000;
-  }
+
   // Реалізуйте конструктор та збільшіть salary на 10000
 }
 
